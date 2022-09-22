@@ -1,0 +1,3 @@
+- Symlink .config to ~/.config
+- Update .gitconfig for username etc.
+- Update/create .gemrc, .npmrc etc.
