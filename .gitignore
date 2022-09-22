@@ -30,8 +30,8 @@ fishd.*
 .npmrc
 docker-compose.yml.local
 .tool-versions
-coc/**/*
-tmuxinator/**/*
+.config/coc/**/*
+.config/tmuxinator/**/*
 
 # Vim
 #Session.vim
