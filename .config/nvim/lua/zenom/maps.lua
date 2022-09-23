@@ -39,3 +39,6 @@ keymap.set('n', '<leader>ra', ':A<cr>')
 
 -- ToggleTerm to run tests?
 -- map <Leader>dt :call VimuxRunCommand("clear; docker-compose exec test bin/rails test " . fnamemodify(expand("%"), ":~:."))<CR>
+--
+-- Additional commands:
+-- R - Refresh Tree
