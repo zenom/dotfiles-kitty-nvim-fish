@@ -24,6 +24,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'kylechui/nvim-surround'
 Plug 'terrortylor/nvim-comment'
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 -- testing
 Plug 'onsails/lspkind-nvim'
@@ -77,4 +78,13 @@ require'nvim-treesitter.configs'.setup{highlight={enable=true}}
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = { 'ruby-lsp', 'elixir-ls' }
+})
+
+--fish,
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.formatting.erb_lint,
+        require("null-ls").builtins.diagnostics.fish,
+        require("null-ls").builtins.completion.spell,
+    },
 })
