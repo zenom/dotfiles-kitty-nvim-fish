@@ -82,7 +82,14 @@ require("nvim-tree").setup({
 })
 
 require('gitsigns').setup()
-require('toggleterm').setup()
+require('toggleterm').setup { 
+  close_on_exit = true,
+  float_opts = {
+	border = "curved",
+	width = 300,
+  }
+}
+
 require("nvim-surround").setup()
 require('nvim_comment').setup()
 require'nvim-treesitter.configs'.setup {
@@ -99,3 +106,19 @@ local lsp = require('lsp-zero') -- setup the lsp configuration
 
 lsp.preset('recommended')
 lsp.setup()
+
+-- lazygit window config
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ 
+  cmd = "lazygit",
+  hidden = true ,
+  direction = "float",
+  dir = "git_dir",
+  float_opts = {
+	border = "double",
+  }
+})
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
