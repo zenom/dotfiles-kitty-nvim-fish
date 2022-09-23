@@ -53,3 +53,5 @@ end
 
 # rbenv
 rbenv init - | source
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
