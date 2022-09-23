@@ -23,6 +23,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'rcarriga/nvim-notify'
+Plug 'mhanberg/elixir.nvim'
 
 -- language
 Plug 'neovim/nvim-lspconfig'
@@ -96,6 +97,13 @@ require'nvim-treesitter.configs'.setup {
 	highlight={enable=true},
 	endwise = {
 		enable = true,
+	},
+	ensure_installed = {
+	  'eex',
+	  'elixir',
+	  'erlang',
+	  'heex',
+	  'ruby'
 	}
 }
 require('notify').setup()
@@ -122,3 +130,5 @@ local lazygit = Terminal:new({
 function _lazygit_toggle()
   lazygit:toggle()
 end
+
+require("elixir").setup()

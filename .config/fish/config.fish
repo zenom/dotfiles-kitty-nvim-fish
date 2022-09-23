@@ -42,7 +42,7 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 
-source (dirname (status --current-filename))/config-osx.fish
+source ~/.config/fish/config-osx.fish
 
 # local config which is not checked in.
 

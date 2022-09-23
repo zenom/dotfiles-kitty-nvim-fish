@@ -30,6 +30,7 @@ brew 'peco'
 brew 'lazygit'
 brew 'npm'
 brew 'elixir'
+brew 'exa'
 
 brew 'icu4c'
 brew 'cmake'
