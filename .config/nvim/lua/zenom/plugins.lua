@@ -33,9 +33,15 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'nvim-lua/popup.nvim'
 
 
--- Plug('neoclide/coc.nvim', {branch = 'release'})
+-- TO TEST
+-- pwntester/octo.nvim
+-- https://github.com/christoomey/vim-tmux-navigator
+-- https://github.com/stevearc/dressing.nvim
 
 vim.call('plug#end')
 
@@ -77,7 +83,8 @@ require('cmp').setup()
 require'nvim-treesitter.configs'.setup{highlight={enable=true}}
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { 'ruby-lsp', 'elixir-ls' }
+	ensure_installed = { 'solargraph', 'elixirls', 'sumneko_lua' },
+	automatic_installation = true,
 })
 
 --fish,
@@ -88,3 +95,28 @@ require("null-ls").setup({
         require("null-ls").builtins.completion.spell,
     },
 })
+
+-- language server settings
+local lsp_defaults = {
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = require('cmp_nvim_lsp').update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
+  on_attach = function(client, bufnr)
+    vim.api.nvim_exec_autocmds('User', {pattern = 'LspAttached'})
+  end
+}
+
+local lspconfig = require('lspconfig')
+
+lspconfig.util.default_config = vim.tbl_deep_extend(
+  'force',
+  lspconfig.util.default_config,
+  lsp_defaults
+)
+
+lspconfig.sumneko_lua.setup {}
+lspconfig.solargraph.setup {}
+lspconfig.tailwindcss.setup {}
