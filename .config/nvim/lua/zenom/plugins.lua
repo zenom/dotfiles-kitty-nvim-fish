@@ -15,16 +15,23 @@ Plug 'windwp/nvim-autopairs'
 Plug 'glepnir/lspsaga.nvim'
 Plug('catppuccin/nvim', {as = 'catppuccin'})
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'akinsho/toggleterm.nvim'
---Plug 'dinhhuy258/git.nvim'
+Plug 'kylechui/nvim-surround'
+Plug 'terrortylor/nvim-comment'
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 
 -- testing
 Plug 'onsails/lspkind-nvim'
---Plug 'hrsh7th/cmp-buffer'
---Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 
 -- Plug('neoclide/coc.nvim', {branch = 'release'})
@@ -41,9 +48,6 @@ vim.cmd [[colorscheme catppuccin]]
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
-
--- empty setup using defaults
-require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
@@ -66,3 +70,11 @@ require("nvim-tree").setup({
 
 require('gitsigns').setup()
 require('toggleterm').setup()
+require("nvim-surround").setup()
+require('nvim_comment').setup()
+require('cmp').setup()
+require'nvim-treesitter.configs'.setup{highlight={enable=true}}
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = { 'ruby-lsp', 'elixir-ls' }
+})

@@ -14,3 +14,5 @@ vim.opt.softtabstop = 4
 vim.opt.mouse = a
 
 vim.g.mapleader = ','
+
+vim.opt.guifont = { 'Hack Nerd Font Mono', 'h14' }
