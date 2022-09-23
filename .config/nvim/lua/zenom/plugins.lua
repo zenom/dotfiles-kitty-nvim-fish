@@ -18,6 +18,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'kylechui/nvim-surround'
 Plug 'terrortylor/nvim-comment'
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
+Plug 'RRethy/nvim-treesitter-endwise'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
@@ -86,12 +87,17 @@ require('gitsigns').setup()
 require('toggleterm').setup()
 require("nvim-surround").setup()
 require('nvim_comment').setup()
-require'nvim-treesitter.configs'.setup{highlight={enable=true}}
+require'nvim-treesitter.configs'.setup {
+	highlight={enable=true},
+	endwise = {
+		enable = true,
+	}
+}
 require('notify').setup()
 
-vim.notify = require('notify')
+vim.notify = require('notify') -- use notify plugin
 
-local lsp = require('lsp-zero')
+local lsp = require('lsp-zero') -- setup the lsp configuration 
 
 lsp.preset('recommended')
 lsp.setup()
