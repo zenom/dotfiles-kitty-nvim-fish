@@ -29,6 +29,7 @@ brew 'fish'
 brew 'peco'
 brew 'lazygit'
 brew 'npm'
+brew 'elixir'
 
 brew 'icu4c'
 brew 'cmake'
