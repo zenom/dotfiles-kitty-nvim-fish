@@ -26,7 +26,7 @@ keymap.set('n', '<leader>jT', '<CMD>Telescope find_files cwd=test/<CR>')
 -- ToggleTerm
 keymap.set('n', '<leader>ft', ':ToggleTerm dir=git_dir direction=float<CR>') -- floating window
 keymap.set('n', '<leader>tb', ':ToggleTerm size=20 dir=git_dir direction=horizontal<CR>') -- bottom window
-keymap.set('n', '<leader>gs', ':TermExec dir=git_dir direction=float cmd="git status"<CR>') -- load git status in floating window
+keymap.set('n', '<leader>gs', ':TermExec dir=git_dir direction=float cmd="lazygit"<CR>') -- load git status in floating window
 keymap.set('n', '<leader>rt', ':TermExec size=20 direction=horizontal dir=. cmd="clear; bundle exec rails test -f -c %"<CR>') -- run tests in window
 keymap.set('n', '<leader>dt', ':TermExec size=20 direction=horizontal dir=. cmd="clear; docker-compose exec  test bin/rails test %:~:."<CR>')
 
