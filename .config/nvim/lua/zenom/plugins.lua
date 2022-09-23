@@ -25,6 +25,7 @@ Plug 'kylechui/nvim-surround'
 Plug 'terrortylor/nvim-comment'
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'tpope/vim-rails'
 
 -- testing
 Plug 'onsails/lspkind-nvim'
