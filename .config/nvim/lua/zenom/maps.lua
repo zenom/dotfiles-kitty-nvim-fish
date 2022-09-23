@@ -30,3 +30,14 @@ keymap.set('n', '<leader>tb', ':ToggleTerm size=20 dir=git_dir direction=horizon
 keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>') -- GitBlame
 
 keymap.set('n', '//', ':nohlsearch<CR>')
+
+
+keymap.set('n', '<aeader>rA', ':AV<cr>') 
+keymap.set('n', '<leader>ra', ':A<cr>') 
+
+-- keymap.set('n', '<leader>rt', ':TermExec dir=. cmd="clear; bundle exec rails test -f -c"'
+
+
+-- ToggleTerm to run tests?
+-- map <Leader>rt :call VimuxRunCommand("clear; bundle exec rails test -f -c " . bufname("%"))<CR>
+-- map <Leader>dt :call VimuxRunCommand("clear; docker-compose exec test bin/rails test " . fnamemodify(expand("%"), ":~:."))<CR>
