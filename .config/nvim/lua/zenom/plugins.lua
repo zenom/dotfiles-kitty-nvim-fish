@@ -45,9 +45,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 
 -- TO TEST
--- pwntester/octo.nvim
 -- https://github.com/christoomey/vim-tmux-navigator
--- https://github.com/stevearc/dressing.nvim
 -- tmux-plugins/vim-tmux
 -- tmux-plugins/vim-tmux-focus-events
 
