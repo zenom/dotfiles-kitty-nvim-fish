@@ -25,6 +25,8 @@ Plug 'terrortylor/nvim-comment'
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'rcarriga/nvim-notify'
 
 -- testing
 Plug 'onsails/lspkind-nvim'
@@ -42,6 +44,8 @@ Plug 'nvim-lua/popup.nvim'
 -- pwntester/octo.nvim
 -- https://github.com/christoomey/vim-tmux-navigator
 -- https://github.com/stevearc/dressing.nvim
+-- tmux-plugins/vim-tmux
+-- tmux-plugins/vim-tmux-focus-events
 
 vim.call('plug#end')
 
@@ -81,6 +85,7 @@ require("nvim-surround").setup()
 require('nvim_comment').setup()
 require('cmp').setup()
 require'nvim-treesitter.configs'.setup{highlight={enable=true}}
+require('notify').setup()
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = { 'solargraph', 'elixirls', 'sumneko_lua' },
@@ -120,3 +125,5 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 lspconfig.sumneko_lua.setup {}
 lspconfig.solargraph.setup {}
 lspconfig.tailwindcss.setup {}
+
+vim.notify = require('notify')
