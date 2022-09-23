@@ -1,3 +1,3 @@
-function lli --wraps='exa --group --header --group-directories-first --long --icons --all' --description 'alias lli=exa --group --header --group-directories-first --long --icons --all'
-  exa --group --header --group-directories-first --long --icons --all $argv;
+function lli --wraps='exa_git $EXA_LI_OPTIONS' --description 'alias lli exa_git $EXA_LI_OPTIONS'
+  exa_git $EXA_LI_OPTIONS $argv; 
 end
