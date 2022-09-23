@@ -1,7 +1,6 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
-
 -- LSP, Treesitter, 
 Plug 'tpope/vim-markdown'
 Plug 'nvim-lualine/lualine.nvim' -- statusline
@@ -26,6 +25,7 @@ Plug 'terrortylor/nvim-comment'
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'tpope/vim-rails'
+Plug('neoclide/coc.nvim', { branch = 'release' } )
 
 -- testing
 Plug 'onsails/lspkind-nvim'
