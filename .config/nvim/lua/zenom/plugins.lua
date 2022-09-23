@@ -4,19 +4,14 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 -- LSP, Treesitter, 
 Plug 'tpope/vim-markdown'
 Plug 'nvim-lualine/lualine.nvim' -- statusline
-Plug 'onsails/lspkind-nvim' -- vscode-like pictograms
 Plug 'MunifTanjim/prettier.nvim'
 Plug 'kyazdani42/nvim-web-devicons' -- File icons
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'glepnir/lspsaga.nvim'
 Plug('catppuccin/nvim', {as = 'catppuccin'})
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'akinsho/toggleterm.nvim'
@@ -28,17 +23,25 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'rcarriga/nvim-notify'
 
--- testing
-Plug 'onsails/lspkind-nvim'
-Plug 'hrsh7th/cmp-nvim-lsp'
+-- language
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+-- auto complete
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'nvim-lua/popup.nvim'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
 
+-- snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+
+-- easy configuration for lsp
+Plug 'VonHeikemen/lsp-zero.nvim'
 
 -- TO TEST
 -- pwntester/octo.nvim
@@ -83,47 +86,12 @@ require('gitsigns').setup()
 require('toggleterm').setup()
 require("nvim-surround").setup()
 require('nvim_comment').setup()
-require('cmp').setup()
 require'nvim-treesitter.configs'.setup{highlight={enable=true}}
 require('notify').setup()
-require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = { 'solargraph', 'elixirls', 'sumneko_lua' },
-	automatic_installation = true,
-})
-
---fish,
-require("null-ls").setup({
-    sources = {
-        require("null-ls").builtins.formatting.erb_lint,
-        require("null-ls").builtins.diagnostics.fish,
-        require("null-ls").builtins.completion.spell,
-    },
-})
-
--- language server settings
-local lsp_defaults = {
-  flags = {
-    debounce_text_changes = 150,
-  },
-  capabilities = require('cmp_nvim_lsp').update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
-  on_attach = function(client, bufnr)
-    vim.api.nvim_exec_autocmds('User', {pattern = 'LspAttached'})
-  end
-}
-
-local lspconfig = require('lspconfig')
-
-lspconfig.util.default_config = vim.tbl_deep_extend(
-  'force',
-  lspconfig.util.default_config,
-  lsp_defaults
-)
-
-lspconfig.sumneko_lua.setup {}
-lspconfig.solargraph.setup {}
-lspconfig.tailwindcss.setup {}
 
 vim.notify = require('notify')
+
+local lsp = require('lsp-zero')
+
+lsp.preset('recommended')
+lsp.setup()
