@@ -8,11 +8,15 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.smarttab = true
-vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.smarttab = false
+vim.opt.softtabstop = 2
 vim.opt.mouse = a
+vim.opt.expandtab = true
+vim.opt.virtualedit = "block"
 
 vim.g.mapleader = ','
 
 vim.opt.guifont = { 'Hack Nerd Font Mono', 'h14' }
+
+vim.wo.wrap = false
