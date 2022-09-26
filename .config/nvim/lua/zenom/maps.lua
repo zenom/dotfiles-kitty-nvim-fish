@@ -35,7 +35,7 @@ keymap.set('n', '//', ':nohlsearch<CR>')
 
 keymap.set('n', '<aeader>rA', ':AV<cr>') 
 keymap.set('n', '<leader>ra', ':A<cr>') 
-keymap.set('n', '<leader><leader> :e#<CR>') -- go back to previous buffer
+keymap.set('n', '<leader><leader>', ':e#<CR>') -- previous buffer
 
 vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 
