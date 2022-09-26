@@ -24,6 +24,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'rcarriga/nvim-notify'
 Plug 'mhanberg/elixir.nvim'
+Plug 'github/copilot.vim'
 
 -- language
 Plug 'neovim/nvim-lspconfig'
