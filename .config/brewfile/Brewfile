@@ -8,6 +8,7 @@ tap 'jesseduffield/lazygit'
 brew 'universal-ctags'
 cask 'kitty'
 cask 'firefox'
+cask 'alfred'
 
 brew 'rbenv'
 brew 'git'
