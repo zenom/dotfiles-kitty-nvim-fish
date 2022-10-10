@@ -112,6 +112,23 @@ else
   maps.n["<C-Right>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize split right" }
 end
 maps.n["vv"] = { "<C-w>v", desc = "Create vertical split." }
+maps.n["ss"] = { "<C-w>s", desc = "Create horizontal split." }
+maps.n["<leader><leader>"] = { ":e#<CR>", desc = "Go to previous buffer" }
+
+-- Rails specific things
+maps.n["<leader>rA"] = { ":AV<CR>", desc = "" }
+maps.n["<leader>ra"] = { ":A<CR>", desc = "" }
+
+-- keymap.set('n', '<aeader>rA', ':AV<cr>')
+-- keymap.set('n', '<leader>ra', ':A<cr>')
+-- keymap.set('n', '<leader><leader>', ':e#<CR>') -- previous buffer
+-- keymap.set('n', '<leader>ja', '<CMD>Telescope find_files cwd=app/assets/<CR>')
+-- keymap.set('n', '<leader>jc', '<CMD>Telescope find_files cwd=app/controllers/<CR>')
+-- keymap.set('n', '<leader>ji', '<CMD>Telescope find_files cwd=app/interactors/<CR>')
+-- keymap.set('n', '<leader>jm', '<CMD>Telescope find_files cwd=app/models/<CR>')
+-- keymap.set('n', '<leader>jv', '<CMD>Telescope find_files cwd=app/views/<CR>')
+-- keymap.set('n', '<leader>jp', '<CMD>Telescope find_files cwd=app/policies/<CR>')
+-- keymap.set('n', '<leader>jT', '<CMD>Telescope find_files cwd=test/<CR>')
 
 -- SymbolsOutline
 if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" } end
@@ -170,6 +187,7 @@ end
 if is_available "toggleterm.nvim" then
   local toggle_term_cmd = astronvim.toggle_term_cmd
   maps.n["<leader>gg"] = { function() toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" }
+  maps.n["<leader>gs"] = { function() toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" }
   maps.n["<leader>tn"] = { function() toggle_term_cmd "node" end, desc = "ToggleTerm node" }
   maps.n["<leader>tu"] = { function() toggle_term_cmd "gdu" end, desc = "ToggleTerm gdu" }
   maps.n["<leader>tt"] = { function() toggle_term_cmd "btm" end, desc = "ToggleTerm btm" }
