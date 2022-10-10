@@ -48,10 +48,10 @@ local astro_plugins = {
   },
 
   -- Bufferline
-  ["akinsho/bufferline.nvim"] = {
-    event = "UIEnter",
-    config = function() require "configs.bufferline" end,
-  },
+  -- ["akinsho/bufferline.nvim"] = {
+  --   event = "UIEnter",
+  --   config = function() require "configs.bufferline" end,
+  -- },
 
   -- Better buffer closing
   ["famiu/bufdelete.nvim"] = { cmd = { "Bdelete", "Bwipeout" } },
