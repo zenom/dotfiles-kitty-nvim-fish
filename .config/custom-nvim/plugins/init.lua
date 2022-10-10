@@ -25,6 +25,18 @@ return {
     override_options = overrides.nvimtree,
   },
 
+  ["NvChad/ui"] = {
+   override_options = {
+     tabufline = {
+       enabled = false,
+       lazyload = false, -- to show tabufline by default
+       overriden_modules = function()
+         return require "custom.xyz"
+       end,
+     },
+   },
+  },
+
   -- Install a plugin
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",
