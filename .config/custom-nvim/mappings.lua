@@ -1,6 +1,5 @@
 local M = {}
 
-
 M.disabled = {
   n = {
     ["<leader>n"] = "", -- disable the row number mapping
@@ -13,7 +12,6 @@ M.general = {
     ["vv"] = { "<C-w>v", "split vertical" },
     ["ss"] = { "<C-w>s", "split horizontal" },
     [",,"] = { ":e# <CR>", "go back to previous file" },
-    ["<leader>gs"] = { "<cmd> ToggleTerm size=40 git_dir direction=float cmd='lazygit'<CR>", ""},
   },
 }
 
