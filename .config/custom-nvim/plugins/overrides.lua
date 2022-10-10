@@ -8,6 +8,16 @@ M.treesitter = {
     "css",
     "typescript",
     "c",
+    "ruby",
+    "eex",
+    "heex",
+    "elixir",
+    "erlang",
+    "fish",
+    "json",
+    "javascript",
+    "markdown",
+    "python",
   },
 }
 
@@ -22,15 +32,16 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "deno",
+    "elixir-ls",
+    "ruby-lsp",
   },
 }
 
 -- git support in nvimtree
 M.nvimtree = {
-  git = {
-    enable = true,
+  filters = {
+    dotfiles = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {

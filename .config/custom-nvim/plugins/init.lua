@@ -42,14 +42,9 @@ return {
   },
 
   ["akinsho/toggleterm.nvim"] = {
+    -- after = "nvim-lspconfig",
     config = function()
-      require("toggleterm").setup({
-        close_on_exit = true,
-        float_opts = {
-              border = "curved",
-              width = 300,
-        }
-      })
+      require "custom.plugins.toggleterm"
     end,
   },
 
