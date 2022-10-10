@@ -46,7 +46,7 @@ source ~/.config/fish/config-osx.fish
 
 # local config which is not checked in.
 
-set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+set LOCAL_CONFIG ~/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
