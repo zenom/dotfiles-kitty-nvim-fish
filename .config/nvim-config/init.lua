@@ -361,4 +361,20 @@ local config = {
 	end,
 }
 
+-- TODO:
+-- Add rt command for running rails tests in console
+-- Add dt command for unning rails tests in docker container
+-- Add commands for filtering telescope by directory for  things like models
+-- -- keymap.set('n', '<leader>ja', '<CMD>Telescope find_files cwd=app/assets/<CR>')
+-- keymap.set('n', '<leader>jc', '<CMD>Telescope find_files cwd=app/controllers/<CR>')
+-- keymap.set('n', '<leader>ji', '<CMD>Telescope find_files cwd=app/interactors/<CR>')
+-- keymap.set('n', '<leader>jm', '<CMD>Telescope find_files cwd=app/models/<CR>')
+-- keymap.set('n', '<leader>jv', '<CMD>Telescope find_files cwd=app/views/<CR>')
+-- keymap.set('n', '<leader>jp', '<CMD>Telescope find_files cwd=app/policies/<CR>')
+-- keymap.set('n', '<leader>jT', '<CMD>Telescope find_files cwd=test/<CR>')
+-- keymap.set('n', '<leader>rt', ':TermExec size=20 direction=horizontal dir=. cmd="clear; bundle exec rails test -f -c %"<CR>') -- run tests in window
+-- keymap.set('n', '<leader>dt', ':TermExec size=20 direction=horizontal dir=. cmd="clear; docker-compose exec  test bin/rails test %:~:."<CR>')
+-- keymap.set('n', '<aeader>rA', ':AV<cr>')
+-- keymap.set('n', '<leader>ra', ':A<cr>')
+
 return config
