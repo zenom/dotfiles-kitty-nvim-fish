@@ -25,14 +25,18 @@ return {
     override_options = overrides.nvimtree,
   },
 
+  ["github/copilot.vim"] = {
+
+  },
+
   ["NvChad/ui"] = {
    override_options = {
      tabufline = {
        enabled = false,
        lazyload = false, -- to show tabufline by default
-       overriden_modules = function()
-         return require "custom.xyz"
-       end,
+       -- overriden_modules = function()
+       --   return require "custom.xyz"
+       -- end,
      },
    },
   },
