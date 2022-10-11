@@ -26,7 +26,7 @@ local config = {
 	},
 
 	-- Set colorscheme to use
-	colorscheme = "default_theme",
+	colorscheme = "catppuccin",
 
 	-- Add highlight groups in any theme
 	highlights = {
@@ -54,6 +54,7 @@ local config = {
 			autopairs_enabled = true, -- enable autopairs at start
 			diagnostics_enabled = true, -- enable diagnostics at start
 			status_diagnostics_enabled = true, -- enable diagnostics in statusline
+			catppuccin_flavour = "macchiato",
 		},
 	},
 	-- If you need more control, you can use the function()...end notation
@@ -205,6 +206,14 @@ local config = {
 			-- You can disable default plugins as follows:
 			-- ["goolord/alpha-nvim"] = { disable = true },
 
+			{ "github/copilot.vim" },
+			{
+				"catppuccin/nvim",
+				as = "catpuccin",
+				config = function()
+					require("catppuccin").setup({})
+				end,
+			},
 			-- You can also add new plugins here as well:
 			-- Add plugins, the packer syntax without the "use"
 			-- { "andweeb/presence.nvim" },
@@ -241,14 +250,45 @@ local config = {
 		end,
 		treesitter = { -- overrides `require("treesitter").setup(...)`
 			-- ensure_installed = { "lua" },
+			ensure_installed = {
+				"json",
+				"ruby",
+				"elixir",
+				"css",
+				"html",
+				"lua",
+				"eex",
+				"heex",
+				"fish",
+				"javascript",
+				"markdown",
+				"python",
+			},
 		},
 		-- use mason-lspconfig to configure LSP installations
 		["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
-			-- ensure_installed = { "sumneko_lua" },
+			-- ensure_installed = { "sumneko_lua" }n,
 		},
 		-- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
 		["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
 			-- ensure_installed = { "prettier", "stylua" },
+			ensure_installed = {
+				"stylua",
+				"css-lsp",
+				"ruby-lsp",
+				"html-lsp",
+				"deno",
+				"elixir-ls",
+				"lua-language-server",
+			},
+		},
+		["neo-tree"] = {
+			filesystem = {
+				filtered_items = {
+					hide_dotfiles = false,
+					hide_gitignored = false,
+				},
+			},
 		},
 	},
 
