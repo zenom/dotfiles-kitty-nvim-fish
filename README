@@ -1,3 +1,11 @@
 - Symlink .config to ~/.config
 - Update .gitconfig for username etc.
 - Update/create .gemrc, .npmrc etc.
+
+- Uses NvChad for base. 
+- Need to PackerCompile, PackerSync
+  - If there is an issue, rm -rf ~/.local/share/nvim and ~/.cache/nvim folders
+  - Then recompile / install.
+- Sym link custom-config directory to ~/.config/nvim/lua/custom 
+
+
