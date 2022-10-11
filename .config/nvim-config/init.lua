@@ -191,6 +191,9 @@ local config = {
 			["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
 			["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
 			["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+			["vv"] = { "<C-w>v<CR", desc = "Split vertical" },
+			["ss"] = { "<C-w>s<CR", desc = "Split horizontal" },
+			["<leader><leader"] = { ":e# <CR>", desc = "Previous file" },
 			-- quick save
 			-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 		},
@@ -205,6 +208,7 @@ local config = {
 		init = {
 			-- You can disable default plugins as follows:
 			-- ["goolord/alpha-nvim"] = { disable = true },
+			["akinsho/bufferline.nvim"] = { disable = true },
 
 			{ "github/copilot.vim" },
 			{
@@ -288,6 +292,11 @@ local config = {
 					hide_dotfiles = false,
 					hide_gitignored = false,
 				},
+			},
+		},
+		bufferline = {
+			options = {
+				always_show_bufferline = false,
 			},
 		},
 	},
