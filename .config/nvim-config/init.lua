@@ -54,7 +54,7 @@ local config = {
 			autopairs_enabled = true, -- enable autopairs at start
 			diagnostics_enabled = true, -- enable diagnostics at start
 			status_diagnostics_enabled = true, -- enable diagnostics in statusline
-			catppuccin_flavour = "macchiato",
+			catppuccin_flavour = "mocha",
 		},
 	},
 	-- If you need more control, you can use the function()...end notation
