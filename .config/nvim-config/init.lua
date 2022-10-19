@@ -194,6 +194,7 @@ local config = {
       ["vv"] = { "<C-w>v<CR", desc = "Split vertical" },
       ["ss"] = { "<C-w>s<CR", desc = "Split horizontal" },
       [",,"] = { ":e# <CR>", desc = "Previous file" },
+      ["//"] = { ":nohlsearch <CR>", desc = "Previous file" },
       ["<leader>jm"] = { "<cmd>Telescope find_files cwd=app/models/<CR>" },
       ["<leader>jc"] = { "<cmd>Telescope find_files cwd=app/controllers/<CR>" },
       ["<leader>ji"] = { "<cmd>Telescope find_files cwd=app/interactors/<CR>" },
