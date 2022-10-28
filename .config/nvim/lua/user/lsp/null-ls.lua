@@ -13,7 +13,8 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.mix.with({ extra_args = { "format", "--stdin-filename", "$FILENAME", "-" } }),
 		formatting.stylua,
-    -- diagnostics.flake8
+		diagnostics.credo,
 	},
 })

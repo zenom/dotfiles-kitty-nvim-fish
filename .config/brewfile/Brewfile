@@ -35,6 +35,7 @@ brew 'elixir'
 brew 'asdf'
 brew 'htop'
 brew 'prettier'
+brew 'stylua'
 
 brew 'icu4c'
 brew 'cmake'
