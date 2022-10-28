@@ -8,7 +8,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
   "ruby_ls",
-  "elixir-ls",
+  "elixirls",
 }
 
 local settings = {
