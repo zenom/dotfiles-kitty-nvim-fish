@@ -79,8 +79,12 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
+-- Git
+keymap("n", "<leader>gb","<cmd>lua require 'gitsigns'.blame_line()<cr>", opts) -- show git blame
+
 -- My Changes
 keymap("n", ",,", ":e# <CR>", opts)
 keymap("n", "ss", "<C-w>s <CR>", opts)
 keymap("n", "vv", "<C-w>v <CR>", opts)
+
 
