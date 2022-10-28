@@ -43,7 +43,7 @@ keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -81,6 +81,6 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- My Changes
 keymap("n", ",,", ":e# <CR>", opts)
--- keymap("n", "vv", "<C-w>h <CR>", opts)
--- keymap("n", "ss", "<C-w>s <CR>", opts)
+keymap("n", "ss", "<C-w>s <CR>", opts)
+keymap("n", "vv", "<C-w>v <CR>", opts)
 
