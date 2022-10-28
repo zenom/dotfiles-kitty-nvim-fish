@@ -4,9 +4,11 @@ local servers = {
 	"html",
 	"pyright",
 	"jsonls",
-  "ruby",
+  "ruby_ls",
   "solargraph",
-  "elixir-ls"
+  "elixirls",
+  "tailwindcss",
+  "yamlls"
 }
 
 local settings = {
