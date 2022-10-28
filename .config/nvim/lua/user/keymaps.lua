@@ -70,4 +70,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Quick Navigation --
 keymap("n", ",,", ":e# <CR>", opts)
-
+keymap("n", "vv", "<C-w>v <CR>", opts)
+keymap("n", "ss", "<C-w>s <CR>", opts)
