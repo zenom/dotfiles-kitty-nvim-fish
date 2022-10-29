@@ -259,6 +259,11 @@ _G.packer_plugins = {
     path = "/Users/andy/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-enfocado"] = {
+    loaded = true,
+    path = "/Users/andy/.local/share/nvim/site/pack/packer/start/vim-enfocado",
+    url = "https://github.com/wuelnerdotexe/vim-enfocado"
+  },
   ["vim-illuminate"] = {
     loaded = true,
     path = "/Users/andy/.local/share/nvim/site/pack/packer/start/vim-illuminate",

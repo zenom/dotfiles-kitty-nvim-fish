@@ -64,6 +64,8 @@ return packer.startup(function(use)
 	use({ "folke/tokyonight.nvim" })
 	use({ "lunarvim/darkplus.nvim" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
+ --  use({ "NLKNguyen/papercolor-theme" })
+  use({ "wuelnerdotexe/vim-enfocado" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
