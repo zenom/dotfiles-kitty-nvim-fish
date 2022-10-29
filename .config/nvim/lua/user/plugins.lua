@@ -61,8 +61,8 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
-	-- use({ "catppuccin/nvim", as = "catppuccin" })
-  use({ "EdenEast/nightfox.nvim" }) 
+	use({ "catppuccin/nvim", as = "catppuccin" })
+  -- use({ "EdenEast/nightfox.nvim" }) 
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
