@@ -9,5 +9,8 @@
 Additional Commands:
 - `gr` - Find all occurences of item under cursor
 - `gd` - Go to definition.
+- 'prefix-x' - Kill the pane in the tmux session list.
+- 'prefix-,' - rename the current pane
+- 'prefix-c' - create new pane
 
 
