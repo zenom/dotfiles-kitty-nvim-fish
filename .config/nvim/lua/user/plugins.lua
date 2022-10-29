@@ -103,6 +103,7 @@ return packer.startup(function(use)
 
 	-- CoPilot
 	use({ "github/copilot.vim" })
+  use({ "tpope/vim-surround" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
