@@ -61,11 +61,7 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
-	-- use({ "folke/tokyonight.nvim" })
-	-- use({ "lunarvim/darkplus.nvim" })
-	use({ "catppuccin/nvim", as = "catppuccin" })
- --  use({ "NLKNguyen/papercolor-theme" })
-  -- use({ "wuelnerdotexe/vim-enfocado" })
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
   use({ "EdenEast/nightfox.nvim" }) 
 
 	-- cmp plugins
