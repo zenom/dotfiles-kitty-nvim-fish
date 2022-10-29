@@ -61,11 +61,12 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 
 	-- Colorschemes
-	use({ "folke/tokyonight.nvim" })
-	use({ "lunarvim/darkplus.nvim" })
+	-- use({ "folke/tokyonight.nvim" })
+	-- use({ "lunarvim/darkplus.nvim" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
  --  use({ "NLKNguyen/papercolor-theme" })
-  use({ "wuelnerdotexe/vim-enfocado" })
+  -- use({ "wuelnerdotexe/vim-enfocado" })
+  use({ "EdenEast/nightfox.nvim" }) 
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -104,6 +105,7 @@ return packer.startup(function(use)
 	-- CoPilot
 	use({ "github/copilot.vim" })
   use({ "tpope/vim-surround" })
+  use({ "tpope/vim-rails" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
