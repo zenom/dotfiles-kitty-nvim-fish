@@ -9,6 +9,7 @@ brew 'universal-ctags'
 cask 'kitty'
 cask 'firefox'
 cask 'alfred'
+cask 'font-jetbrains-mono'
 
 brew 'rbenv'
 brew 'git'
