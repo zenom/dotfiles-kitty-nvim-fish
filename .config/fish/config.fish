@@ -22,12 +22,26 @@ alias g git
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
-set -gx SHELL "/opt/homebrew/bin/fish"
+
+switch (uname)
+  case Darwin
+    # do things for macOS
+    set -gx SHELL "/opt/homebrew/bin/fish"
+    set -gx PATH /opt/homebrew/bin $PATH
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
+    source ~/.config/fish/config-osx.fish
+  case Linux
+    # do things for Linux
+    set -gx SHELL "/usr/bin/fish"
+    source ~/.config/fish/config-linux.fish
+    source /opt/asdf-vm/asdf.fish
+  case '*'
+    # do things for other OSs
+end
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
@@ -42,7 +56,6 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 
-source ~/.config/fish/config-osx.fish
 
 # local config which is not checked in.
 
@@ -52,6 +65,5 @@ if test -f $LOCAL_CONFIG
 end
 
 # rbenv
-rbenv init - | source
+# rbenv init - | source
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
