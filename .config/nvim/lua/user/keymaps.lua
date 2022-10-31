@@ -86,5 +86,11 @@ keymap("n", "<leader>gb","<cmd>lua require 'gitsigns'.blame_line()<cr>", opts) -
 keymap("n", ",,", ":e# <CR>", opts)
 keymap("n", "ss", "<C-w>s <CR>", opts)
 keymap("n", "vv", "<C-w>v <CR>", opts)
-
-
+keymap('n', '<leader>rt', ':2TermExec size=20 direction=horizontal dir=. cmd="clear; bundle exec rails test -f -c %"<CR>')
+keymap('n', '<leader>dt', ':2TermExec size=20 direction=horizontal dir=. cmd="clear; docker-compose exec  test bin/rails test %:~:."<CR>')
+keymap('n', '<leader>jm', ':Telescope find_files cwd=app/models/<CR>')
+keymap('n', '<leader>jT', ':Telescope find_files cwd=test/<CR>')
+keymap('n', '<leader>ji', ':Telescope find_files cwd=app/interactors/<CR>')
+keymap('n', '<leader>jv', ':Telescope find_files cwd=app/views/<CR>')
+keymap('n', '<leader>rA', ':AV<cr>')
+keymap('n', '<leader>ra', ':A<cr>')
