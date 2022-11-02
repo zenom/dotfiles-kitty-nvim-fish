@@ -14,16 +14,22 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias ls=exa
-alias ll="exa -alh"
-alias tree="exa --tree"
 alias g git
 command -qv nvim && alias vim nvim
+
+if type -q exa
+    alias ls=exa
+    alias ll="exa -alh"
+    alias tree="exa --tree"
+end
 
 if type -q bat
     alias cat="bat"
 end
 
+if type -q rg
+    alias search="rg"
+end
 
 set -gx EDITOR nvim
 
