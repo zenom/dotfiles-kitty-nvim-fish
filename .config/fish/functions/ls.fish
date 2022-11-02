@@ -1,3 +1,3 @@
-function ls --wraps=lli --description 'alias ls=lli'
-  lli $argv; 
+function ls --wraps=exa --description 'alias ls=exa'
+  exa $argv; 
 end

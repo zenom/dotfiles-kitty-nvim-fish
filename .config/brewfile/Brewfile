@@ -36,6 +36,9 @@ brew 'asdf'
 brew 'htop'
 brew 'prettier'
 brew 'stylua'
+brew 'exa'
+brew 'bat'
+
 
 brew 'icu4c'
 brew 'cmake'
