@@ -19,7 +19,7 @@ command -qv nvim && alias vim nvim
 
 if type -q exa
     alias ls=exa
-    alias ll="exa -alh"
+    alias ll="exa -alh --icons"
     alias tree="exa --tree"
 end
 
