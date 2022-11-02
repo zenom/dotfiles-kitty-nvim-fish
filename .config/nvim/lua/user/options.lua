@@ -39,10 +39,8 @@ vim.opt.shortmess:append("c") -- hide all the completion messages, e.g. "-- XXX 
 vim.opt.whichwrap:append("<,>,[,],h,l") -- keys allowed to move to the previous/next line when the beginning/end of line is reached
 vim.opt.iskeyword:append("-") -- treats words with `-` as single words
 
+-- get rid of whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
 	command = [[%s/\s\+$//e]],
 })
-
--- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
-vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
