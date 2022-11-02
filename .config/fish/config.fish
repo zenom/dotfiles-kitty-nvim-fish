@@ -75,4 +75,6 @@ if test -f $LOCAL_CONFIG
 end
 
 # rbenv
-rbenv init - | source
+if type -q rbenv
+    rbenv init - | source
+end
