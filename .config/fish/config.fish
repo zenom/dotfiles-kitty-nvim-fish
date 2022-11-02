@@ -20,6 +20,11 @@ alias tree="exa --tree"
 alias g git
 command -qv nvim && alias vim nvim
 
+if type -q bat
+    alias cat="bat"
+end
+
+
 set -gx EDITOR nvim
 
 switch (uname)
