@@ -44,3 +44,4 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
 	command = [[%s/\s\+$//e]],
 })
+vim.g.copilot_assume_mapped = true
