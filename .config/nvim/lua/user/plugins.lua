@@ -102,6 +102,7 @@ return packer.startup(function(use)
 	use({ "github/copilot.vim" })
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-rails" })
+  use({"mrjones2014/dash.nvim", run = "make install"})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
