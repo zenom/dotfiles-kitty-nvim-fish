@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "debcaae806e8cdf6c6976476483ae0531fe460b6"
+        "revision": "c9f757e275879ffbc0cfd417012e90081a227445"
       },
       "homebrew/cask-fonts": {
         "revision": "f3cc9512724757a3e28bfc8b39728320045fbd10"
@@ -1489,6 +1489,12 @@
         "options": {
           "full_name": "font-jetbrains-mono"
         }
+      },
+      "1password-cli": {
+        "version": "2.7.3",
+        "options": {
+          "full_name": "1password/tap/1password-cli"
+        }
       }
     }
   },
@@ -1497,7 +1503,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.6.8",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "7918be3c59e3d2a14ddf768dc7aae22f64e34dfc",
+        "Homebrew/homebrew-core": "5822c8584266ae7c7bbbc346902561d87678b84d",
         "CLT": "14.1.0.0.1.1666437224",
         "Xcode": "14.1",
         "macOS": "12.6.1"

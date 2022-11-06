@@ -10,6 +10,7 @@ cask 'kitty'
 cask 'firefox'
 cask 'alfred'
 cask 'font-jetbrains-mono'
+cask '1password/tap/1password-cli'
 
 brew 'rbenv'
 brew 'git'
