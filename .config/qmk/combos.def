@@ -1,0 +1,7 @@
+COMB(eiEsc,   KC_ESC,   KC_J, KC_I) // escape
+COMB(mvWindowRight, LCTL(KC_L), KC_M, KC_N) // move to right window
+COMB(mvWindowLeft, LCTL(KC_H), KC_G, KC_T) // move to left window
+
+SUBS(vim_write, ":w\n", RTHUMB_IN, KC_F, KC_W) // like :w
+SUBS(vim_quit, ":q\n", RTHUMB_IN, KC_Z, KC_X) // like :q
+SUBS(helloWorld, "QMK is pretty rad eh?", KC_H, KC_J)
